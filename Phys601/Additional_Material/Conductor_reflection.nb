@@ -1,0 +1,191 @@
+(* Content-type: application/vnd.wolfram.mathematica *)
+
+(*** Wolfram Notebook File ***)
+(* http://www.wolfram.com/nb *)
+
+(* CreatedBy='Mathematica 11.1' *)
+
+(*CacheID: 234*)
+(* Internal cache information:
+NotebookFileLineBreakTest
+NotebookFileLineBreakTest
+NotebookDataPosition[       158,          7]
+NotebookDataLength[      6465,        183]
+NotebookOptionsPosition[      5720,        158]
+NotebookOutlinePosition[      6073,        174]
+CellTagsIndexPosition[      6030,        171]
+WindowFrame->Normal*)
+
+(* Beginning of Notebook Content *)
+Notebook[{
+Cell[BoxData[
+ RowBox[{
+  RowBox[{"Remove", "[", "\"\<Global`*\>\"", "]"}], ";"}]], "Input",
+ CellChangeTimes->{{3.719766603718004*^9, 3.719766671512829*^9}, {
+  3.719766736044065*^9, 3.719766749981*^9}, {3.7197733799965143`*^9, 
+  3.719773394602261*^9}},ExpressionUUID->"403dfe96-b12e-41f8-b3f1-\
+d3766942b728"],
+
+Cell["\<\
+E0 is the incident wave
+E1 is the reflected wave
+The magnitude is equal in a perfect conductor, but the reflected wave is \
+phase shifted by \[Pi]\
+\>", "Text",
+ CellChangeTimes->{{3.7197740287079277`*^9, 3.719774086531966*^9}},
+ Background->RGBColor[
+  0.88, 1, 0.88],ExpressionUUID->"aa50afbd-09ae-4802-a943-83cfa58b8392"],
+
+Cell[BoxData[{
+ RowBox[{
+  RowBox[{
+   RowBox[{
+    RowBox[{"E0", "[", 
+     RowBox[{"z_", ",", "t_"}], "]"}], ":=", " ", 
+    RowBox[{"Exp", "[", 
+     RowBox[{"I", 
+      RowBox[{"(", 
+       RowBox[{"z", "-", "t"}], ")"}]}], "]"}]}], ";"}], 
+  " "}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{
+   RowBox[{
+    RowBox[{"E1", "[", 
+     RowBox[{"z_", ",", "t_"}], "]"}], ":=", " ", 
+    RowBox[{"-", 
+     RowBox[{"Exp", "[", 
+      RowBox[{"I", 
+       RowBox[{"(", 
+        RowBox[{
+         RowBox[{"-", "z"}], "-", "t"}], ")"}]}], "]"}]}]}], ";"}], 
+  " "}]}], "Input",
+ CellChangeTimes->{{3.719773399373022*^9, 3.719773503364337*^9}, 
+   3.719773600939015*^9},ExpressionUUID->"4a6d9330-88a8-463e-a72c-\
+f517d99c2ab5"],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{"Manipulate", "[", 
+  RowBox[{
+   RowBox[{"Plot", "[", 
+    RowBox[{
+     RowBox[{"{", 
+      RowBox[{
+       RowBox[{"Re", "[", 
+        RowBox[{"E0", "[", 
+         RowBox[{"z", ",", "t"}], "]"}], "]"}], ",", 
+       RowBox[{"Re", "[", 
+        RowBox[{"E1", "[", 
+         RowBox[{"z", ",", "t"}], "]"}], "]"}], ",", 
+       RowBox[{"Re", "[", 
+        RowBox[{
+         RowBox[{"E0", "[", 
+          RowBox[{"z", ",", "t"}], "]"}], "+", 
+         RowBox[{"E1", "[", 
+          RowBox[{"z", ",", "t"}], "]"}]}], "]"}]}], "}"}], ",", " ", 
+     RowBox[{"{", 
+      RowBox[{"z", ",", 
+       RowBox[{"-", "10"}], ",", "0"}], "}"}], ",", " ", 
+     RowBox[{"PlotLegends", "\[Rule]", 
+      RowBox[{"{", 
+       RowBox[{
+       "\"\<\!\(\*SubscriptBox[\(E\), \(0\)]\)\>\"", ",", 
+        "\"\<\!\(\*SubscriptBox[\(E\), \(1\)]\)\>\"", ",", 
+        "\"\<\!\(\*SubscriptBox[\(E\), \(0\)]\)+\!\(\*SubscriptBox[\(E\), \(1\
+\)]\)\>\""}], "}"}]}], ",", " ", 
+     RowBox[{"PlotRange", "\[Rule]", 
+      RowBox[{"{", 
+       RowBox[{
+        RowBox[{"-", "2"}], ",", "2"}], "}"}]}]}], "]"}], ",", " ", 
+   RowBox[{"{", 
+    RowBox[{"t", ",", "0", ",", "10"}], "}"}]}], "]"}]], "Input",
+ CellChangeTimes->{{3.719773511101276*^9, 3.719773584601737*^9}, {
+  3.7197736450502987`*^9, 3.719773733881659*^9}, {3.719773819633691*^9, 
+  3.719773882857606*^9}, {3.719773988982547*^9, 
+  3.719773991681027*^9}},ExpressionUUID->"bb677518-8fd7-4424-99e6-\
+bb4f56bb74d4"],
+
+Cell[BoxData[
+ TagBox[
+  StyleBox[
+   DynamicModuleBox[{$CellContext`t$$ = 9.66, Typeset`show$$ = True, 
+    Typeset`bookmarkList$$ = {}, Typeset`bookmarkMode$$ = "Menu", 
+    Typeset`animator$$, Typeset`animvar$$ = 1, Typeset`name$$ = 
+    "\"untitled\"", Typeset`specs$$ = {{
+      Hold[$CellContext`t$$], 0, 10}}, Typeset`size$$ = {442., {115., 120.}}, 
+    Typeset`update$$ = 0, Typeset`initDone$$, Typeset`skipInitDone$$ = 
+    True, $CellContext`t$48958$$ = 0}, 
+    DynamicBox[Manipulate`ManipulateBoxes[
+     1, StandardForm, "Variables" :> {$CellContext`t$$ = 0}, 
+      "ControllerVariables" :> {
+        Hold[$CellContext`t$$, $CellContext`t$48958$$, 0]}, 
+      "OtherVariables" :> {
+       Typeset`show$$, Typeset`bookmarkList$$, Typeset`bookmarkMode$$, 
+        Typeset`animator$$, Typeset`animvar$$, Typeset`name$$, 
+        Typeset`specs$$, Typeset`size$$, Typeset`update$$, Typeset`initDone$$,
+         Typeset`skipInitDone$$}, "Body" :> Plot[{
+         Re[
+          $CellContext`E0[$CellContext`z, $CellContext`t$$]], 
+         Re[
+          $CellContext`E1[$CellContext`z, $CellContext`t$$]], 
+         Re[$CellContext`E0[$CellContext`z, $CellContext`t$$] + \
+$CellContext`E1[$CellContext`z, $CellContext`t$$]]}, {$CellContext`z, -10, 0},
+         PlotLegends -> {
+         "\!\(\*SubscriptBox[\(E\), \(0\)]\)", 
+          "\!\(\*SubscriptBox[\(E\), \(1\)]\)", 
+          "\!\(\*SubscriptBox[\(E\), \(0\)]\)+\!\(\*SubscriptBox[\(E\), \
+\(1\)]\)"}, PlotRange -> {-2, 2}], 
+      "Specifications" :> {{$CellContext`t$$, 0, 10}}, "Options" :> {}, 
+      "DefaultOptions" :> {}],
+     ImageSizeCache->{487., {160., 166.}},
+     SingleEvaluation->True],
+    Deinitialization:>None,
+    DynamicModuleValues:>{},
+    SynchronousInitialization->True,
+    UndoTrackedVariables:>{Typeset`show$$, Typeset`bookmarkMode$$},
+    UnsavedVariables:>{Typeset`initDone$$},
+    UntrackedVariables:>{Typeset`size$$}], "Manipulate",
+   Deployed->True,
+   StripOnInput->False],
+  Manipulate`InterpretManipulate[1]]], "Output",
+ CellChangeTimes->{{3.719773586069964*^9, 3.719773623405672*^9}, 
+   3.719773669959342*^9, 3.719773736044897*^9, 3.719773842998289*^9, 
+   3.719773884154121*^9, 
+   3.719773993965179*^9},ExpressionUUID->"ab802d4c-c2d2-43cf-a1c6-\
+b08f009fbd88"]
+}, Open  ]]
+},
+WindowSize->{808, 675},
+WindowMargins->{{4, Automatic}, {Automatic, 4}},
+FrontEndVersion->"11.1 for Mac OS X x86 (32-bit, 64-bit Kernel) (April 27, \
+2017)",
+StyleDefinitions->"Default.nb"
+]
+(* End of Notebook Content *)
+
+(* Internal cache information *)
+(*CellTagsOutline
+CellTagsIndex->{}
+*)
+(*CellTagsIndex
+CellTagsIndex->{}
+*)
+(*NotebookFileOutline
+Notebook[{
+Cell[558, 20, 312, 6, 32, "Input", "ExpressionUUID" -> \
+"403dfe96-b12e-41f8-b3f1-d3766942b728"],
+Cell[873, 28, 334, 8, 84, "Text", "ExpressionUUID" -> \
+"aa50afbd-09ae-4802-a943-83cfa58b8392"],
+Cell[1210, 38, 725, 25, 54, "Input", "ExpressionUUID" -> \
+"4a6d9330-88a8-463e-a72c-f517d99c2ab5"],
+Cell[CellGroupData[{
+Cell[1960, 67, 1472, 39, 54, "Input", "ExpressionUUID" -> \
+"bb677518-8fd7-4424-99e6-bb4f56bb74d4"],
+Cell[3435, 108, 2269, 47, 343, "Output", "ExpressionUUID" -> \
+"ab802d4c-c2d2-43cf-a1c6-b08f009fbd88"]
+}, Open  ]]
+}
+]
+*)
+
